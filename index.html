@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSK DevOps Showcase</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/4d1540d4d5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🚀 Welcome TSK Team</h1>
+            <p>End-to-End CI/CD Pipeline Demonstration</p>
+        </header>
+
+        <section class="card">
+
+            <h2>👨‍💻 About Me</h2>
+
+            <p><strong>Name:</strong> Arun Kumar</p>
+
+            <p>
+                This application demonstrates a fully automated CI/CD pipeline
+                using GitHub, Docker, Amazon EC2.
+            </p>
+
+        </section>
+
+        <section class="card">
+
+            <h2>🛠 Tech Stack</h2>
+
+            <div class="grid">
+
+                <div class="tech">🐙 GitHub Action</div>                
+                <div class="tech">🐳 Docker</div>                
+                <div class="tech">☁ Amazon EC2</div>
+                <div class="tech">🔐 IAM</div>
+
+            </div>
+
+        </section>
+
+        <section class="card">
+
+            <h2>📊 Deployment Information</h2>
+
+            <table>
+
+                <tr>
+                    <td>Application Version</td>
+                    <td id="version"></td>
+                </tr>
+
+                <tr>
+                    <td>Pipeline Status</td>
+                    <td class="success">SUCCESS ✅</td>
+                </tr>
+
+                <tr>
+                    <td>Deployment Target</td>
+                    <td>Amazon EC2</td>
+                </tr>
+
+                <tr>
+                    <td>Container Registry</td>
+                    <td>Amazon ECR</td>
+                </tr>
+
+                <tr>
+                    <td>CI/CD Tool</td>
+                    <td>GitHub runner</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+        <section class="card">
+
+            <h2>🚀 Deployment Demo</h2>
+
+            <button onclick="deploy()">
+
+                Simulate Deployment
+
+            </button>
+
+            <p id="message"></p>
+
+        </section>
+
+        <footer>
+
+            Built by Arun Kumar | AWS | Docker | GitHub | EC2
+
+        </footer>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
