@@ -1,0 +1,30 @@
+name: Test Self Hosted Runner
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Display System Information
+        run: |
+          echo "Runner is working successfully!"
+          pwd
+          whoami
+          hostname
+
+      - name: Check Git Version
+        run: git --version
+
+      - name: Check Docker Version
+        run: docker --version
+
+      - name: List Project Files
+        run: ls -la
