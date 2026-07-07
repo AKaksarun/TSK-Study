@@ -1,0 +1,39 @@
+name: Deploy Docker Application
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker Image
+        run: |
+          docker build -t tsk-devops-showcase:latest .
+
+      - name: Stop Existing Container
+        run: |
+          docker stop tsk-container || true
+
+      - name: Remove Existing Container
+        run: |
+          docker rm tsk-container || true
+
+      - name: Run New Container
+        run: |
+          docker run -d \
+            --name tsk-container \
+            -p 80:80 \
+            --restart always \
+            tsk-devops-showcase:latest
+
+      - name: Verify Deployment
+        run: |
+          docker ps
